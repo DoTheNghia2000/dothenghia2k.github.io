@@ -1,0 +1,144 @@
+﻿@model Models.EF.SANPHAM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage_detail.cshtml";
+}
+
+
+
+<div class="container_fullwidth">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="products-details">
+                    <div class="preview_image">
+                        <div class="preview-small">
+                            <img id="zoom_03" src="@Html.DisplayFor(model=>model.HINHANH)" data-zoom-image="images/products/Large/products-01.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="products-description">
+                        <h5 class="name">
+                            @Html.DisplayFor(model => model.TENSANPHAM)
+                        </h5>
+                        <p>
+                            <img alt="" src="images/star.png">
+                            <a class="review_num" href="#">
+                                02 Review(s)
+                            </a>
+                        </p>
+                        <p>
+                            Hãng sản xuất:
+                            <span class=" light-red">
+                                @Html.DisplayFor(model => model.HANGSANXUAT)
+                            </span>
+                        </p>
+                        <p>
+                            Size:
+                            <span class=" light-red">
+                                @Html.DisplayFor(model => model.SIZE)
+                            </span>
+                        </p>
+                        <p>
+                            Màu:
+                            <span class=" light-red">
+                                @Html.DisplayFor(model => model.MAUSAC)
+                            </span>
+                        </p>
+                        @if (@Html.DisplayFor(model => model.SALE) != null)
+                        {
+                            <p>
+                                Sale:
+                                <span class=" light-red">
+                                    @Html.DisplayFor(model => model.SALE)%
+                                </span>
+                            </p>
+                        }
+                        else
+                        {
+                            <p>
+                                Not Sale
+                            </p>
+                        }
+
+                        <hr class="border">
+                        <div class="price">
+                            Price :
+                            <span class="new_price">
+                                @Html.DisplayFor(model => model.GIATIEN)
+                                <sup>
+                                    VND
+                                </sup>
+                            </span>
+
+
+                        </div>
+                        <hr class="border">
+                        <div class="wided">
+                            <div class="qty">
+                                Qty &nbsp;&nbsp;:
+                                <select>
+                                    <option>
+                                        1
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="button_group">
+                                <a href="/them-gio-hang?productID= @Html.DisplayFor(model => model.IDSANPHAM)&quantity=1"><button class="button">
+                                    Add To Cart
+                                </button></a>
+                                <button class="button compare">
+                                    <i class="fa fa-exchange">
+                                    </i>
+                                </button>
+                                <button class="button favorite">
+                                    <i class="fa fa-heart-o">
+                                    </i>
+                                </button>
+                                <button class="button favorite">
+                                    <i class="fa fa-envelope-o">
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        <hr class="border">
+                        <img src="~/assets/client/images/share.png" alt="" class="pull-right">
+                    </div>
+                </div>
+                <div class="clearfix">
+                </div>
+                <div class="tab-box">
+                    <div id="tabnav">
+                        <ul>
+                            <li>
+                                <a href="#Descraption">
+                                    DESCRIPTION
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#Reviews">
+                                    REVIEW
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tags">
+                                    PRODUCT TAGS
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content-wrap">
+                        <div class="tab-content" id="Descraption">
+                            <p>
+                            @Html.DisplayFor(model => model.MOTA)
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

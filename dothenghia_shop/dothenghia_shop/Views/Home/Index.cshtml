@@ -1,0 +1,164 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage_trangchu.cshtml";
+    var ListNikeProduct1 = (List<Models.EF.SANPHAM>)ViewBag.NikeProduct1;
+    var ListNikeProduct2 = (List<Models.EF.SANPHAM>)ViewBag.NikeProduct2;
+    var ListAdidasProduct1 = (List<Models.EF.SANPHAM>)ViewBag.AdidasProduct1;
+    var ListAdidasProduct2 = (List<Models.EF.SANPHAM>)ViewBag.AdidasProduct2;
+}
+@section Search{
+
+    <ul class="option">
+        <li id="search" class="search">
+            <form>
+                
+                    <input type="text" class="form-control" value="@ViewBag.SearchString" name="searchString" placeholder="Search &amp; enter">
+                    <a class="srh-btn" href="@Url.Action("Index","Nike")">
+                        <i class="ti-close"></i>
+                    </a>
+                
+            </form>
+        </li>
+        <li class="option-cart">
+            <a href="@Url.Action("Index","Cart")" class="cart-icon">cart <span class="cart_no"></span></a>
+
+        </li>
+    </ul>
+
+
+}
+@section NikeProducts{
+    <div class="hot-products">
+        <h3 class="title"><strong>Nike</strong> Products</h3>
+        <div class="control"><a id="prev_hot" class="prev" href="#">&lt;</a><a id="next_hot" class="next" href="#">&gt;</a></div>
+        <ul id="hot">
+            <li>
+                <div class="row">
+                    @foreach (var item in ListNikeProduct1)
+                    {
+                        if (@item.TOPHOT != null)
+                        {
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="products">
+                                    <div class="offer">New</div>
+                                    <div class="thumbnail"><a href="@Url.Action("Details", "Home", new { id = item.IDSANPHAM })"><img src="@item.HINHANH" alt="Product Name"></a></div>
+                                    <div class="productname">@item.TENSANPHAM</div>
+                                    <h4 class="price">@item.GIATIEN VND</h4>
+                                    <div class="button_group"><a href="/them-gio-hang?productID=@item.IDSANPHAM&quantity=1"><button class="button add-cart" type="button">Add To Cart</button></a><button class="button compare" type="button"><i class="fa fa-exchange"></i></button><button class="button wishlist" type="button"><i class="fa fa-heart-o"></i></button></div>
+                                </div>
+                            </div>
+
+                        }
+                        else
+                        {
+                            if (@item.SALE != null)
+                            {
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="products">
+                                        <div class="offer">-%@item.SALE</div>
+                                        <div class="thumbnail"><a href="@Url.Action("Details", "Home", new { id = item.IDSANPHAM })"><img src="@item.HINHANH" alt="Product Name"></a></div>
+                                        <div class="productname">@item.TENSANPHAM</div>
+                                        <h4 class="price">@item.GIATIEN VND</h4>
+                                        <div class="button_group"><a href="/them-gio-hang?productID=@item.IDSANPHAM&quantity=1"><button class="button add-cart" type="button">Add To Cart</button></a><button class="button compare" type="button"><i class="fa fa-exchange"></i></button><button class="button wishlist" type="button"><i class="fa fa-heart-o"></i></button></div>
+                                    </div>
+                                </div>
+
+                            }
+                        }
+                    }
+                </div>
+            </li>
+            <li>
+                <div class="row">
+                    @foreach (var item in ListNikeProduct2)
+                    {
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="products">
+                                <div class="thumbnail"><a href="@Url.Action("Details", "Home", new { id = item.IDSANPHAM })"><img src="@item.HINHANH" alt="Product Name"></a></div>
+                                <div class="productname">@item.TENSANPHAM</div>
+                                <h4 class="price">@item.GIATIEN VND</h4>
+                                <div class="button_group"><a href="/them-gio-hang?productID=@item.IDSANPHAM&quantity=1"><button class="button add-cart" type="button">Add To Cart</button></a><button class="button compare" type="button"><i class="fa fa-exchange"></i></button><button class="button wishlist" type="button"><i class="fa fa-heart-o"></i></button></div>
+                            </div>
+                        </div>
+
+                    }
+                </div>
+            </li>
+        </ul>
+    </div>
+}
+
+@section AdidasProducts{
+    <div class="clearfix"></div>
+    <div class="featured-products">
+        <h3 class="title"><strong>Adidas</strong> Products</h3>
+        <div class="control"><a id="prev_featured" class="prev" href="#">&lt;</a><a id="next_featured" class="next" href="#">&gt;</a></div>
+        <ul id="featured">
+            <li>
+                <div class="row">
+                    @foreach (var item in ListAdidasProduct1)
+                    {
+
+                        if (@item.TOPHOT != null)
+                        {
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="products">
+                                    <div class="offer">New</div>
+                                    <div class="thumbnail"><a href="@Url.Action("Details", "Home", new { id = item.IDSANPHAM })"><img src="@item.HINHANH" alt="Product Name"></a></div>
+                                    <div class="productname">@item.TENSANPHAM</div>
+                                    <h4 class="price">@item.GIATIEN VND</h4>
+                                    <div class="button_group"><a href="/them-gio-hang?productID=@item.IDSANPHAM&quantity=1"><button class="button add-cart" type="button">Add To Cart</button></a><button class="button compare" type="button"><i class="fa fa-exchange"></i></button><button class="button wishlist" type="button"><i class="fa fa-heart-o"></i></button></div>
+                                </div>
+                            </div>
+
+                        }
+                        else
+                        {
+                            if (@item.SALE != null)
+                            {
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="products">
+                                        <div class="offer">-%@item.SALE</div>
+                                        <div class="thumbnail"><a href="@Url.Action("Details", "Home", new { id = item.IDSANPHAM })"><img src="@item.HINHANH" alt="Product Name"></a></div>
+                                        <div class="productname">@item.TENSANPHAM</div>
+                                        <h4 class="price">@item.GIATIEN VND</h4>
+                                        <div class="button_group"><a href="/them-gio-hang?productID=@item.IDSANPHAM&quantity=1"><button class="button add-cart" type="button">Add To Cart</button></a><button class="button compare" type="button"><i class="fa fa-exchange"></i></button><button class="button wishlist" type="button"><i class="fa fa-heart-o"></i></button></div>
+                                    </div>
+                                </div>
+
+                            }
+                        }
+                    }
+                </div>
+            </li>
+            <li>
+                <div class="row">
+                    @foreach (var item in ListAdidasProduct2)
+                    {
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="products">
+                                <div class="thumbnail"><a href="@Url.Action("Details", "Home", new { id = item.IDSANPHAM })"><img src="@item.HINHANH" alt="Product Name"></a></div>
+                                <div class="productname">@item.TENSANPHAM</div>
+                                <h4 class="price">@item.GIATIEN VND</h4>
+                                <div class="button_group"><a href="/them-gio-hang?productID=@item.IDSANPHAM&quantity=1"><button class="button add-cart" type="button">Add To Cart</button></a><button class="button compare" type="button"><i class="fa fa-exchange"></i></button><button class="button wishlist" type="button"><i class="fa fa-heart-o"></i></button></div>
+                            </div>
+                        </div>
+
+                    }
+                </div>
+            </li>
+        </ul>
+    </div>
+}
+
+
+
+

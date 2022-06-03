@@ -1,0 +1,307 @@
+﻿@model List<dothenghia_shop.Models.CartItem>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage_detail.cshtml";
+}
+@section jsFooter{
+        <script src="~/assets/client/js/controller/cartController.js"></script>
+    }
+<div class="container_fullwidth">
+    <div class="container shopping-cart">
+        @if(Model.Count>0)
+        {
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="title">
+                    Shopping Cart
+                </h3>
+                <div class="clearfix">
+                </div>
+                <table class="shop-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Hình
+                            </th>
+                            <th>
+                                Chi tiết sản phẩm
+                            </th>
+                            <th>
+                                Giá tiền
+                            </th>
+                            <th>
+                                Số lượng
+                            </th>
+                            <th>
+                                Thành tiền
+                            </th>
+                            <th>
+                                Xóa
+                            </th>
+                        </tr>
+                    </thead>
+                    @foreach (var item in Model)
+                    {
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="@item.Product.HINHANH" alt="">
+                                </td>
+                                <td>
+                                    <div class="shop-details">
+                                        <div class="productname">
+                                            @item.Product.TENSANPHAM
+                                        </div>
+                                        <p>
+                                            <img alt="" src="~/assets/client/images/star.png">
+                                            <a class="review_num" href="#">
+                                                02 Review(s)
+                                            </a>
+                                        </p>
+                                        <div class="color-choser">
+                                            <span class="text">
+                                                Màu sắc :
+                                            </span>
+                                            <ul>
+                                                
+                                                 @item.Product.MAUSAC
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h5>
+                                        @item.Product.GIATIEN.GetValueOrDefault(0)
+                                    </h5>
+                                </td>
+                                <td>
+                                    <input type="text" class="txtQuantity" data-id="@item.Product.IDSANPHAM" value="@item.Quantity"/>
+                                </td>
+                                <td>
+                                    <h5>
+                                        <strong class="red">
+                                            @if (@item.Product.SALE != null)
+                                            {
+                                                @((item.Product.GIATIEN.GetValueOrDefault(0) - (item.Product.SALE * item.Product.GIATIEN.GetValueOrDefault(0) / 100)) * item.Quantity)
+                                            }
+                                            else
+                                            {
+                                                @(item.Product.GIATIEN.GetValueOrDefault(0)*item.Quantity)
+                                            }
+                                        </strong>
+                                    </h5>
+                                </td>
+                                <td>
+                                    <a href="#" id="btnDeleteAll">
+                                        <img src="~/assets/client/images/remove.png" alt="">
+                                    </a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    }
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">
+                                
+                                <button id="btnContinue" class="pull-left">
+                                     Continue Shopping
+                                </button>
+
+                                <button id="btnUpdate" class=" pull-right">
+                                    Update Shopping Cart
+                                </button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        }
+        else
+        {
+            <span class="shippingbox" style="background-color:#333333"><h5 style="color:#fe5252; text-align:center;">Chưa có sản phẩm nào trong giỏ hàng</h5></span>
+        }
+        
+        <div class="clearfix">
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="shippingbox">
+                    <h5>
+                        Estimate Shipping And Tax
+                    </h5>
+                    <form>
+                        <label>
+                            Select Country *
+                        </label>
+                        <select class="">
+                            <option value="AL">
+                                Alabama
+                            </option>
+                            <option selected="" value="IL">
+                                Illinois
+                            </option>
+                        </select>
+                        <label>
+                            State / Province *
+                        </label>
+                        <select class="">
+                            <option value="AL">
+                                Alabama
+                            </option>
+                            <option selected="" value="IL">
+                                Illinois
+                            </option>
+                        </select>
+                        <div class="clearfix">
+                        </div>
+                        <button>
+                            Get A Qoute
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="shippingbox">
+                    <h5>
+                        Discount Codes
+                    </h5>
+                    <form>
+                        <label>
+                            Enter your coupon code if you have one
+                        </label>
+                        <input type="text" name="">
+                        <div class="clearfix">
+                        </div>
+                        <button>
+                            Get A Qoute
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="shippingbox">
+                    <div class="subtotal">
+                        <h5>
+                            Sub Total
+                        </h5>
+                        <span>
+                            $1.000.00
+                        </span>
+                    </div>
+                    <div class="grandtotal">
+                        <h5>
+                            GRAND TOTAL
+                        </h5>
+                        <span>
+                            $1.000.00
+                        </span>
+                    </div>
+                    <button id="btnPayment">
+                        Process To Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix">
+        </div>
+        <div class="our-brand">
+            <h3 class="title">
+                <strong>
+                    Our
+                </strong>
+                Brands
+            </h3>
+            <div class="control">
+                <a id="prev_brand" class="prev" href="#">
+                    &lt;
+                </a>
+                <a id="next_brand" class="next" href="#">
+                    &gt;
+                </a>
+            </div>
+            <ul id="braldLogo">
+                <li>
+                    <ul class="brand_item">
+                        <li>
+                            <a href="#">
+                                <div class="brand-logo">
+                                    <img src="~/assets/client/images/footer1.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="brand-logo">
+                                    <img src="~/assets/client/images/footer2.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="brand-logo">
+                                    <img src="~/assets/client/images/footer3.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="brand-logo">
+                                    <img src="~/assets/client/images/footer4.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="brand-logo">
+                                    <img src="~/assets/client/images/footer5.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="brand_item">
+                        <li>
+                            <a href="#">
+                                <div class="brand-logo">
+                                    <img src="images/envato.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="brand-logo">
+                                    <img src="images/themeforest.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="brand-logo">
+                                    <img src="images/photodune.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="brand-logo">
+                                    <img src="images/activeden.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="brand-logo">
+                                    <img src="images/envato.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

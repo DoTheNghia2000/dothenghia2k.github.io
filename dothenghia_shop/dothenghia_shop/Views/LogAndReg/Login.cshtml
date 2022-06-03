@@ -1,0 +1,51 @@
+﻿@model dothenghia_shop.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutPage_log_reg.cshtml";
+}
+
+
+    @using (Html.BeginForm("Login", "LogAndReg", FormMethod.Post))
+    {
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" });
+        <h1>LOGIN</h1>
+        <div class="w3layoutscontaineragileits">
+            <h2>Login here</h2>
+            <form action="#" method="post">
+                @Html.TextBoxFor(model => model.UserName, new { @class = "input", @autofocus = "autofocus", placeholder = "USER NAME" })
+                @Html.PasswordFor(model => model.Password, new { @class = "input", placeholder = "PASSWORD" })
+                <ul class="agileinfotickwthree">
+                    <li>
+                        <input type="checkbox" id="brand1" value="">
+                        <label for="brand1"><span></span>Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </li>
+                    <li>
+                        <div class="bottom-header">
+                            <h3>OR</h3>
+                        </div>
+                        <div class="social-links">
+                            <ul>
+                                <!-- facebook -->
+                                <li> <a class="facebook" href="#" target="blank"><i class="fa fa-facebook"></i></a></li>
+
+                                <!-- twitter -->
+                                <li> <a class="twitter" href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
+
+                                <!-- google plus -->
+                                <li> <a class="googleplus" href="#" target="blank"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="aitssendbuttonw3ls">
+                    <input type="submit" value="LOGIN">
+                    <p> To register new account <span>→</span> <a  href="@Url.Action("Register","LogAndReg")"> Click Here</a></p>
+                    <div class="clear"></div>
+                </div>
+            </form>
+        </div>
+    }
+
+
+

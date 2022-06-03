@@ -1,0 +1,79 @@
+C:\Users\Windo\Desktop\dothenghia_shop\Models\bin\Debug\Models.dll.config
+C:\Users\Windo\Desktop\dothenghia_shop\Models\bin\Debug\Models.dll
+C:\Users\Windo\Desktop\dothenghia_shop\Models\bin\Debug\Models.pdb
+C:\Users\Windo\Desktop\dothenghia_shop\Models\bin\Debug\EntityFramework.dll
+C:\Users\Windo\Desktop\dothenghia_shop\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Windo\Desktop\dothenghia_shop\Models\bin\Debug\EntityFramework.xml
+C:\Users\Windo\Desktop\dothenghia_shop\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Windo\Desktop\dothenghia_shop\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\Windo\Desktop\dothenghia_shop\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Windo\Desktop\dothenghia_shop\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\Windo\Desktop\dothenghia_shop\Models\obj\Debug\Models.dll
+C:\Users\Windo\Desktop\dothenghia_shop\Models\obj\Debug\Models.pdb
+C:\Users\Windo\Desktop\dothenghia_shop\Models\bin\Debug\PagedList.dll
+C:\Users\Windo\Desktop\dothenghia_shop\Models\bin\Debug\PagedList.Mvc.dll
+C:\Users\Windo\Desktop\dothenghia_shop\Models\bin\Debug\PagedList.xml
+C:\Users\Windo\Desktop\dothenghia_shop\Models\bin\Debug\PagedList.Mvc.xml
+E:\dothenghia_shop\Models\bin\Debug\Models.dll.config
+E:\dothenghia_shop\Models\bin\Debug\Models.dll
+E:\dothenghia_shop\Models\bin\Debug\Models.pdb
+E:\dothenghia_shop\Models\bin\Debug\EntityFramework.dll
+E:\dothenghia_shop\Models\bin\Debug\EntityFramework.SqlServer.dll
+E:\dothenghia_shop\Models\bin\Debug\PagedList.dll
+E:\dothenghia_shop\Models\bin\Debug\PagedList.Mvc.dll
+E:\dothenghia_shop\Models\bin\Debug\EntityFramework.xml
+E:\dothenghia_shop\Models\bin\Debug\EntityFramework.SqlServer.xml
+E:\dothenghia_shop\Models\bin\Debug\PagedList.xml
+E:\dothenghia_shop\Models\bin\Debug\PagedList.Mvc.xml
+E:\dothenghia_shop\Models\obj\Debug\Models.csprojAssemblyReference.cache
+E:\dothenghia_shop\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+E:\dothenghia_shop\Models\obj\Debug\Models.csproj.CopyComplete
+E:\dothenghia_shop\Models\obj\Debug\Models.dll
+E:\dothenghia_shop\Models\obj\Debug\Models.pdb
+D:\dothenghia_shop\Models\bin\Debug\Models.dll.config
+D:\dothenghia_shop\Models\bin\Debug\Models.dll
+D:\dothenghia_shop\Models\bin\Debug\Models.pdb
+D:\dothenghia_shop\Models\bin\Debug\EntityFramework.dll
+D:\dothenghia_shop\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\dothenghia_shop\Models\bin\Debug\PagedList.dll
+D:\dothenghia_shop\Models\bin\Debug\PagedList.Mvc.dll
+D:\dothenghia_shop\Models\bin\Debug\EntityFramework.xml
+D:\dothenghia_shop\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\dothenghia_shop\Models\bin\Debug\PagedList.xml
+D:\dothenghia_shop\Models\bin\Debug\PagedList.Mvc.xml
+D:\dothenghia_shop\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\dothenghia_shop\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\dothenghia_shop\Models\obj\Debug\Models.csproj.CopyComplete
+D:\dothenghia_shop\Models\obj\Debug\Models.dll
+D:\dothenghia_shop\Models\obj\Debug\Models.pdb
+C:\Users\dothe\Desktop\dothenghia_shop\Models\bin\Debug\Models.dll.config
+C:\Users\dothe\Desktop\dothenghia_shop\Models\bin\Debug\Models.dll
+C:\Users\dothe\Desktop\dothenghia_shop\Models\bin\Debug\Models.pdb
+C:\Users\dothe\Desktop\dothenghia_shop\Models\bin\Debug\EntityFramework.dll
+C:\Users\dothe\Desktop\dothenghia_shop\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dothe\Desktop\dothenghia_shop\Models\bin\Debug\PagedList.dll
+C:\Users\dothe\Desktop\dothenghia_shop\Models\bin\Debug\PagedList.Mvc.dll
+C:\Users\dothe\Desktop\dothenghia_shop\Models\bin\Debug\EntityFramework.xml
+C:\Users\dothe\Desktop\dothenghia_shop\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dothe\Desktop\dothenghia_shop\Models\bin\Debug\PagedList.xml
+C:\Users\dothe\Desktop\dothenghia_shop\Models\bin\Debug\PagedList.Mvc.xml
+C:\Users\dothe\Desktop\dothenghia_shop\Models\obj\Debug\Models.csproj.AssemblyReference.cache
+C:\Users\dothe\Desktop\dothenghia_shop\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\dothe\Desktop\dothenghia_shop\Models\obj\Debug\Models.dll
+C:\Users\dothe\Desktop\dothenghia_shop\Models\obj\Debug\Models.pdb
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\bin\Debug\Models.dll.config
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\bin\Debug\Models.dll
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\bin\Debug\Models.pdb
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\bin\Debug\EntityFramework.dll
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\bin\Debug\PagedList.dll
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\bin\Debug\PagedList.Mvc.dll
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\bin\Debug\EntityFramework.xml
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\bin\Debug\PagedList.xml
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\bin\Debug\PagedList.Mvc.xml
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\obj\Debug\Models.csproj.AssemblyReference.cache
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\obj\Debug\Models.dll
+C:\Users\dothe\OneDrive\Máy tính\dothenghia_shop\Models\obj\Debug\Models.pdb

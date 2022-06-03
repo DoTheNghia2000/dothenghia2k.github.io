@@ -1,0 +1,82 @@
+CREATE DATABASE QUANLYSHOP
+
+USE QUANLYSHOP
+
+CREATE TABLE USERS
+(
+	IDUSER  INT IDENTITY(1,1) PRIMARY KEY,
+	TEN		VARCHAR(50),
+	MATKHAU	VARCHAR(50),
+	EMAIL	VARCHAR(MAX),
+	REPASS	VARCHAR(50),
+	TRANGTHAI	BIT,
+)
+
+CREATE TABLE SANPHAM
+(
+	IDSANPHAM	INT IDENTITY(1,1) PRIMARY KEY,
+	TENSANPHAM	NVARCHAR(100),
+	HINHANH		VARCHAR(MAX),
+	HANGSANXUAT	VARCHAR(50),
+	GIATIEN		DECIMAL(18,0),
+	SIZE		varchar(50),
+	MAUSAC		NVARCHAR(50),
+	MOTA		NVARCHAR(MAX),
+	TOPHOT		VARCHAR(10),
+	SALE		INT,
+	DANHGIA		FLOAT,
+)
+
+CREATE TABLE NHANXET
+(
+	IDUSER		int,
+	IDSANPHAM	int,
+	BINHLUAN	VARCHAR(MAX),
+	NGAY		DATETIME,
+	DANHGIA		INT,
+	PRIMARY KEY(IDUSER,IDSANPHAM)
+)
+
+CREATE TABLE HOADON
+(
+	IDHOADON	INT IDENTITY(1,1) PRIMARY KEY,
+	IDSANPHAM	int,
+	IDUSER		int,
+	SOLUONG		INT,
+	THANHTIEN	DECIMAL(18,0),
+)
+
+CREATE TABLE CHITIETHOADON
+(
+	IDHOADON	INT PRIMARY KEY,
+	NGAYMUA		DATETIME,
+	DIACHI		VARCHAR(MAX),
+	SDT			INT,
+)
+
+SET DATEFORMAT  DMY
+
+alter table NHANXET
+add foreign key(IDUSER) references USERS(IDUSER)
+On delete cascade on update cascade
+
+alter table NHANXET
+add foreign key(IDSANPHAM) references SANPHAM(IDSANPHAM)
+On delete cascade on update cascade
+
+alter table HOADON
+add foreign key(IDSANPHAM) references SANPHAM(IDSANPHAM)
+On delete cascade on update cascade
+
+alter table HOADON
+add foreign key(IDUSER) references USERS(IDUSER)
+On delete cascade on update cascade
+
+alter table CHITIETHOADON
+add foreign key(IDHOADON) references HOADON(IDHOADON)
+On delete cascade on update cascade
+
+insert into SANPHAM values('sfa','','','','','','','','','')
+delete from USERS
+
+select * from SANPHAM

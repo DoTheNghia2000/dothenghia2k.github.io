@@ -1,0 +1,43 @@
+﻿@model dothenghia_shop.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutPage_log_reg.cshtml";
+}
+
+@using (Html.BeginForm("Register", "LogAndReg", FormMethod.Post))
+{
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" });
+    <h1>REGISTER</h1>
+    <div class="w3layoutscontaineragileits">
+        <h2>Register here</h2>
+        <form action="#" method="post">
+            
+                @Html.TextBoxFor(model => model.UserName, new { @class = "input", placeholder = "USER NAME" })
+               
+                
+                @Html.TextBoxFor(model => model.Email, new { @class = "input", placeholder = "EMAIL", type = "email" })
+                
+            
+                
+                @Html.PasswordFor(model => model.Password, new { @class = "input", placeholder = "PASSWORD" })
+               
+            
+                
+                @Html.PasswordFor(model => model.repasss, new { @class = "input", placeholder = "CONFIRM PASSWORD" })
+                
+            
+            <div class="login-check">
+                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><span style="color:white;">I Accept Terms & Conditions</span></label>
+            </div>
+
+            <div class="aitssendbuttonw3ls">
+                <input type="submit" value="REGISTER">
+                <p> To Login account <span>→</span> <a href="@Url.Action("Login","LogAndReg")"> Click Here</a></p>
+                <div class="clear"></div>
+            </div>
+        </form>
+    </div>
+}
+
+
+
